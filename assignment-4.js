@@ -34,3 +34,55 @@ function sendNotification(email) {
 
 // console.log(sendNotification("zihad@gmail.com"));
 
+
+
+
+function checkDigitsInName(name) {
+   if(typeof name !== 'string'){
+    return "Invalid Input"
+   }
+
+  for(let i=0; i<name.length;i++){
+    if(name[i]>="0" && name[i]<="9"){
+        return true;
+    }
+  }
+  return false;
+
+}
+// console.log(checkDigitsInName("Raj123"));   
+// console.log(checkDigitsInName("n9ayeem"));  
+// console.log(checkDigitsInName("e1mu3"));    
+// console.log(checkDigitsInName("Suman"));    
+// console.log(checkDigitsInName("Name2024")); 
+// console.log(checkDigitsInName("!@#"));      
+// console.log(checkDigitsInName(["Raj"])); 
+
+
+
+
+
+// Problem 4
+function calculateFinalScore(obj) {
+    if(typeof obj !== 'object'){
+        return "Invalid Input"
+       }
+
+ const farmerFamily =20;    
+ let finalMark=obj.testScore+obj.schoolGrade;
+
+if (obj.isFFamily){
+finalMark +=farmerFamily;
+}
+return finalMark >= 80;
+
+}
+
+// console.log(calculateFinalScore({ name: "Rajib", testScore: 15,  schoolGrade: 25, isFFamily : true  }) );
+ 
+   
+
+
+
+
+
