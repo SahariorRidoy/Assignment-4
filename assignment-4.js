@@ -74,13 +74,41 @@ function calculateFinalScore(obj) {
 if (obj.isFFamily){
 finalMark +=farmerFamily;
 }
-return finalMark >= 80;
+if(finalMark>=80){
+    return true;
+}else{
+    return false;
+}
 
 }
 
-// console.log(calculateFinalScore({ name: "Rajib", testScore: 15,  schoolGrade: 25, isFFamily : true  }) );
+// console.log(calculateFinalScore({ name: "Rajib", testScore: 50,  schoolGrade: 29, isFFamily : false  }) );
  
    
+
+
+
+
+function  waitingTime(waitingTimes  , serialNumber) {
+    if (serialNumber<waitingTimes.length || waitingTimes !=Array.isArray || typeof serialNumber !="number" ){
+        return "Invalid Input"
+    }
+
+    let sumOfArray=0;
+    for(const waitTime of waitingTimes){
+         sumOfArray +=waitTime;
+    }
+    let avg= sumOfArray/waitingTimes.length;
+        avg =Math.round(avg)
+    let remainingPerson=serialNumber-waitingTimes.length-1;
+    let finalWaitTime=avg*remainingPerson;
+    return finalWaitTime;
+     
+
+}
+
+
+// console.log(waitingTime(7 , 10));
 
 
 
